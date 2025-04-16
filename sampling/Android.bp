@@ -56,7 +56,10 @@ fdo_profile {
 
 fdo_profile {
     name: "libgui",
-    profile: "libgui.afdo",
+    profile: select(release_flag("RELEASE_BUILD_AFDO_PROFILE_VERSION"), {
+        any @ version: version + "/libgui.afdo",
+        default: "",
+    }),
 }
 
 fdo_profile {
@@ -69,7 +72,10 @@ fdo_profile {
     name: "libhwui",
     arch: {
         arm64: {
-            profile: "libhwui_arm64.afdo",
+            profile: select(release_flag("RELEASE_BUILD_AFDO_PROFILE_VERSION"), {
+                any @ version: version + "/libhwui_arm64.afdo",
+                default: "",
+            }),
         },
     },
 }
@@ -96,7 +102,10 @@ fdo_profile {
 
 fdo_profile {
     name: "libui",
-    profile: "libui.afdo",
+    profile: select(release_flag("RELEASE_BUILD_AFDO_PROFILE_VERSION"), {
+        any @ version: version + "/libui.afdo",
+        default: "",
+    }),
 }
 
 fdo_profile {
@@ -121,7 +130,10 @@ fdo_profile {
 
 fdo_profile {
     name: "surfaceflinger",
-    profile: "surfaceflinger.afdo",
+    profile: select(release_flag("RELEASE_BUILD_AFDO_PROFILE_VERSION"), {
+        any @ version: version + "/surfaceflinger.afdo",
+        default: "",
+    }),
 }
 
 fdo_profile {
