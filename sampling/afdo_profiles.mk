@@ -22,5 +22,7 @@ AFDO_PROFILES += keystore2://toolchain/pgo-profiles/sampling:keystore2 \
 	libz://toolchain/pgo-profiles/sampling:libz \
 	linker://toolchain/pgo-profiles/sampling:linker \
 	lmkd://toolchain/pgo-profiles/sampling:lmkd \
+	libharfbuzz_ng://toolchain/pgo-profiles/sampling:libharfbuzz_ng \
+	libminikin://toolchain/pgo-profiles/sampling:libminikin \
 	server_configurable_flags://toolchain/pgo-profiles/sampling:server_configurable_flags \
 	surfaceflinger://toolchain/pgo-profiles/sampling:surfaceflinger
